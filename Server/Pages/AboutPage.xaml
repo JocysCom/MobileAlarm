@@ -46,7 +46,7 @@
 					<Label.FormattedText>
 						<FormattedString>
 							<FormattedString.Spans>
-								<Span Text="Remote Controller" FontAttributes="Bold" FontSize="24" />
+								<Span Text="Mobile Alarm" FontAttributes="Bold" FontSize="24" />
 								<Span Text=" " />
 								<Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" FontAttributes="Bold" FontSize="24" />
 							</FormattedString.Spans>
@@ -57,12 +57,12 @@
 					<Label.FormattedText>
 						<FormattedString>
 							<FormattedString.Spans>
-								<Span Text="Remote Controller for X360CE Application" />
+								<Span Text="Mobile alarm for bicycle project" />
 							</FormattedString.Spans>
 						</FormattedString>
 					</Label.FormattedText>
 				</Label>
-				<Button Margin="0,10,0,0" Text="www.x360ce.com"
+				<Button Margin="0,10,0,0" Text="jocys.com/Bicycle"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />

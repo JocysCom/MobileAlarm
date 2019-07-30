@@ -153,9 +153,9 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RemoteController\RemoteController.csproj">
-      <Project>{4f87ad6a-e202-4e5a-87ab-bf3debe553b1}</Project>
-      <Name>RemoteController</Name>
+    <ProjectReference Include="..\Server\JocysCom.MobileAlarm.Server.csproj">
+      <Project>{0773bbef-2e54-4d97-ba66-ad8acc56b31a}</Project>
+      <Name>JocysCom.MobileAlarm.Server</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

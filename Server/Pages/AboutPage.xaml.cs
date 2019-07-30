@@ -15,7 +15,7 @@ namespace JocysCom.MobileAlarm.Server.Pages
 		{
 			InitializeComponent();
 			Title = "About";
-			OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.x360ce.com")));
+			OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://www.jocys.com/Bicycle")));
 		}
 
 		public ICommand OpenWebCommand { get; }

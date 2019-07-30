@@ -1,0 +1,3 @@
+icon-256x256.png upscaled with waifu2x first.
+https://github.com/DeadSix27/waifu2x-converter-cpp
+waifu2x-converter-cpp.exe -i icon-256x256.png --scale-ratio 4 --force-OpenCL -o icon.png

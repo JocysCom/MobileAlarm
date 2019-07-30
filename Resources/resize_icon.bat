@@ -1,6 +1,8 @@
 @echo off
-:: icon-256x256.png upscaled with waifu2x-caffe first.
-:: 
+::icon-256x256.png upscaled with waifu2x first.
+::https://github.com/DeadSix27/waifu2x-converter-cpp
+::waifu2x-converter-cpp.exe -i icon-256x256.png --scale-ratio 4 --force-OpenCL -o icon.png:: 
+::
 :: Create icons.
 set n=icon.png
 set i=Input/%n%
@@ -10,6 +12,8 @@ CALL:RES   72   72 "%o%/mipmap-hdpi/%n%"
 CALL:RES   96   96 "%o%/mipmap-xhdpi/%n%"
 CALL:RES  144  144 "%o%/mipmap-xxhdpi/%n%"
 CALL:RES  192  192 "%o%/mipmap-xxxhdpi/%n%"
+CALL:RES  432  432 "%o%/drawable/about_logo.png"
+::
 :: Create backgrounds.
 set n=launcher_foreground.png
 set i=Input/%n%
