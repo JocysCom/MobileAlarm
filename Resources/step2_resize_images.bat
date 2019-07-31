@@ -1,7 +1,6 @@
 @echo off
-::icon-256x256.png upscaled with waifu2x first.
-::https://github.com/DeadSix27/waifu2x-converter-cpp
-::waifu2x-converter-cpp.exe -i icon-256x256.png --scale-ratio 4 --force-OpenCL -o icon.png:: 
+:: Image Magick:
+:: http://www.imagemagick.org/script/command-line-processing.php
 ::
 :: Create icons.
 set n=icon.png
@@ -27,12 +26,21 @@ pause
 GOTO:EOF
 
 :RES
+:: Set path to converter.
+SET dfe=ImageMagick\convert.exe
+SET exe=%dfe%
+IF NOT EXIST "%exe%" SET exe=%ProgramFiles%\%dfe%
+IF NOT EXIST "%exe%" SET exe=%ProgramFiles(x86)%\%dfe%
+IF NOT EXIST "%exe%" SET exe=D:\Program Files\%dfe%
+IF NOT EXIST "%exe%" SET exe=D:\Program Files (x86)\%dfe%
+IF NOT EXIST "%exe%" GOTO:EOF
+:: Resize image.
 SET rsz=%1x%1
 IF %2 gtr %1 SET rsz=%2x%2
 SET d=%~dp3
 echo %1 %2 %3
 IF NOT EXIST "%d%" MKDIR "%d%"
-ImageMagick\convert.exe -resize %rsz% -gravity center -extent %1x%2 %i% "%d%%~nx3"
+"%exe%" -resize %rsz% -gravity center -extent %1x%2 %i% "%d%%~nx3"
 ::-gravity center -extent %2x%3
 :: -resize %2x%3^ -flatten
 GOTO:EOF
